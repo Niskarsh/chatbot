@@ -4,9 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build && nodemon dist/server/server.js"
+    "start": "babel-watch --watch views server/server.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "babel-cli": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "babel-watch": "^2.0.7",
     "rimraf": "^2.6.2"
   }
 }
